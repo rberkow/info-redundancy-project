@@ -20,10 +20,11 @@ function [ corrected ] = two_d_parity_block_decode(r, oep)
     errs = xor(parities,rx_parities);
     err_indices = find(errs);
     if max(size(err_indices)) > 3
-        error('too many errors introduced to correct')
+        corrected = r(1:s); % too many errors to correct, just return orignal message
+        return;
     end
     c = r;
-    if size(err_indices) > 1
+    if size(err_indices) > 1 % if less than 1, no errors are present
         row = err_indices(1);
         col = err_indices(2) - s/oep;
        

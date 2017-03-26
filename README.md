@@ -9,5 +9,7 @@ Experimenting with different encoding schemes
  * bit-wise TMR simulation
  * byte-interlaced parity code
 3. Error vectors.
+ * Gaussian Noise  
+ * Burst Error - Gilbert-Elliot Model 
 4. Decoding
 5. Analysis

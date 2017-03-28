@@ -12,15 +12,15 @@ function out_sig = burst_error(in_sig, packet_length)
 
 %given these values a pattern of "packet" loss will 
 %be generated and applied to the input signal 
-gb = 0.1;
+gb = 0.15;
 bg = 0.25;
 num_packets = length(in_sig)/packet_length; 
 
 good_state = 1; % 1 if in good state, 0 if in bad state 
 
 %error channel that is used to introduce error into pakcets 
-good_channel = comm.AWGNChannel('EbNo', 20);
-bad_channel = comm.AWGNChannel('EbNo',0);
+good_channel = comm.AWGNChannel('EbNo', 40);
+bad_channel = comm.AWGNChannel('EbNo', -40);
 out_sig = in_sig;
 size = 1;
 while size <= num_packets

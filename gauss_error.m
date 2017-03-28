@@ -6,7 +6,7 @@ function out_sig = gauss_error(in_sig)
 %   with gaussian noise introduced 
 
 %create channel which will introduce gaussian noise 
-channel = comm.AWGNChannel('EbNo', 10);
+channel = comm.AWGNChannel('EbNo', 8);
 %pass the signal through the channel 
 out_sig = channel.step(in_sig); 
 channel.reset();

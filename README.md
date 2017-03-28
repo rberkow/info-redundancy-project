@@ -5,9 +5,7 @@ Experimenting with different encoding schemes
 2. Encoding schemes. We will look at the following
  * 2-D parity coding
  * Hamming (7, 4) code
- * Hamming (8, 4) code
  * bit-wise TMR simulation
- * byte-interlaced parity code
 3. Error vectors.
  * Gaussian Noise  
  * Burst Error - Gilbert-Elliot Model 
